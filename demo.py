@@ -8,13 +8,13 @@ __date__ = "$02-may-2012 23:41:48$"
 
 def callback1():
     print("Hello periodic timer")
-    print(time.time(), "my thread %s" % str(threading.current_thread().ident), '\n')
+    print(time.time(), "my thread %s %s" % (threading.current_thread().ident, threading.current_thread()._tstate_lock), '\n')
 
 
 def callback2(text_msg):
     global xT1
     print(text_msg)
-    print(time.time(), "my thread %s" % str(threading.current_thread().ident), '\n')
+    print(time.time(), "my thread %s %s" % (threading.current_thread().ident, threading.current_thread()._tstate_lock), '\n')
     xT1.terminate()
 
 
