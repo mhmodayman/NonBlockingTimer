@@ -9,3 +9,5 @@
 # Each timer preserves its ident value during the entire run
 
 # No memory leakage (guaranteed)
+
+# Each timer supports start, pause, resume, and terminate
